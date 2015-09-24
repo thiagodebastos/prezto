@@ -1,0 +1,6 @@
+# For examples, refer to http://zsh.sourceforge.net/Intro/intro_8.html
+
+## UBUNTU FIXES
+# Receive keys when apt-get update complains
+# http://www.sklav.com/apt-key-cheat-sheet
+alias get-key='sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys'

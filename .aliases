@@ -5,9 +5,6 @@
 # http://www.sklav.com/apt-key-cheat-sheet
 alias get-key='sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys'
 alias fixnfs='sudo ntfsfix'
-alias edit-aliases='atom ~/.zprezto/.aliases'
-alias edit-aliases='atom ~/.zprezto/.aliases'
-alias ss3='sudo node ~/.msi-klm/server.js'
 alias up='sudo apt-fast update && sudo apt-fast upgrade -y && sudo apt-fast upgrade dist -y'
 
 ## PATHS
@@ -19,3 +16,5 @@ alias pbpaste='xclip -selection clipboard -o'
 
 ## MAKE
 alias banner='git clone git@gitlab.mcsaatchi.com.au:MAKE/banner-zen.git'
+
+alias edit-aliases='atom ~/.zprezto/.aliases'

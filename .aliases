@@ -10,13 +10,15 @@ alias up='sudo apt-fast update && sudo apt-fast upgrade -y && sudo apt-fast upgr
 ## PATHS
 alias @projects='~/Projects/'
 alias @study='~/Projects/Study'
-## TOOLS
-#alias pbcopy='xclip -selection clipboard'
-#alias pbpaste='xclip -selection clipboard -o'
 
 ## Banners
 alias banner='git clone git@gitlab.mcsaatchi.com.au:MAKE/banner-zen.git'
 
+## Atom
+alias atom='atom-beta'
+alias ath='atom .'
+
+## HELPERS
 alias edit-aliases='atom ~/.zprezto/.aliases'
 alias cask='brew cask'
-alias ath='atom-beta .'
+alias cwd='pwd | pbcopy'

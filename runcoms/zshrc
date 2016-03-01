@@ -11,3 +11,25 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+export NVM_DIR="/Users/thiago/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
+
+# Aliases
+## PATHS
+alias @projects='${HOME}/Projects/'
+alias @study='${HOME}/Projects/Study'
+
+## Banners
+alias banner='git clone git@gitlab.mcsaatchi.com.au:MAKE/banner-zen.git'
+
+## Atom
+alias atom='atom-beta'
+alias ath='atom .'
+
+## HELPERS
+alias edit-aliases='atom ~/.zprezto/.aliases'
+alias cask='brew cask'
+alias cwd='pwd | pbcopy'

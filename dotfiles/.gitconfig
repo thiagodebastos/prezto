@@ -1,0 +1,13 @@
+[user]
+	name = Thiago de Bastos
+	email = thiago@thiagodebastos.com
+[core]
+	excludesfile = /Users/debastost/.gitignore_global
+[color]
+	ui = true
+[push]
+	default = simple
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f

@@ -12,7 +12,7 @@ fi
 
 # Customize to your needs...
 
-export NVM_DIR="/Users/thiago/.nvm"
+export NVM_DIR="${HOME}/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
@@ -30,7 +30,9 @@ alias atom='atom-beta'
 alias ath='atom .'
 
 ## HELPERS
-alias edit-aliases='atom ~/.zprezto/.aliases'
+alias edit-aliases='atom ~/.zprezto/runcoms/.zshrc'
 alias cask='brew cask'
 alias cwd='pwd | pbcopy'
 alias dotfiles='for f in $(ls -d "${ZDOTDIR:-$HOME}"/.zprezto/dotfiles/.*); do ln -s -f $f "${ZDOTDIR:-$HOME}"; done && echo "\033[0;94m"${ZDOTDIR:-$HOME}"/.zprezto/dotfiles/.*\033[0m \033[0;36m>>\033[0m \033[0;32m"${ZDOTDIR:-$HOME}""'
+# [get colour codes here "https://wiki.archlinux.org/index.php/Bash/Prompt_customization"]
+alias update='printf "\e[35m updating atom packages... \n" && apm update -y && printf "\e[35m updating global npm modules... \n" && npm update -g && printf "\e[35m updating homebrew... \n" && brew up && printf "\e[35m Your machine is up to date! \n"'

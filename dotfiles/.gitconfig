@@ -2,7 +2,7 @@
 	name = Thiago de Bastos
 	email = thiago@thiagodebastos.com
 [core]
-	excludesfile = /Users/debastost/.gitignore_global
+	excludesfile = /Users/thiago/.gitignore_global
 [color]
 	ui = true
 [push]
@@ -11,3 +11,11 @@
 	required = true
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
+[fetch]
+	recurseSubmodules = false
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

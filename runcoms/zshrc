@@ -21,6 +21,7 @@ test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_in
 ## PATHS
 alias @projects='${HOME}/Projects/'
 alias @study='${HOME}/Projects/Study'
+alias @fcc='${HOME}/Projects/Study/freecodecamp'
 
 ## Banners
 alias banner='git clone git@gitlab.com:thiagodebastos/banner-zen.git'
@@ -37,3 +38,4 @@ alias dotfiles='for f in $(ls -d "${ZDOTDIR:-$HOME}"/.zprezto/dotfiles/.*); do l
 # [get colour codes here "https://wiki.archlinux.org/index.php/Bash/Prompt_customization"]
 alias update='printf "\e[35m updating atom packages... \n" && apm update -y && printf "\e[35m updating global npm modules... \n" && npm update -g && printf "\e[35m updating homebrew... \n" && brew up && printf "\e[35m Your machine is up to date! \n"'
 alias nvm-up='nvm install node --reinstall-packages-from=node'
+alias wpl='./node_modules/.bin/webpack'

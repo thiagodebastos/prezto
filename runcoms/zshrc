@@ -31,11 +31,15 @@ alias atom='atom-beta'
 alias ath='atom .'
 
 ## HELPERS
-alias edit-aliases='atom ~/.zprezto/runcoms/.zshrc'
+alias edit-aliases='atom ~/.zprezto/runcoms/zshrc'
 alias cask='brew cask'
 alias cwd='pwd | pbcopy'
 alias dotfiles='for f in $(ls -d "${ZDOTDIR:-$HOME}"/.zprezto/dotfiles/.*); do ln -s -f $f "${ZDOTDIR:-$HOME}"; done && echo "\033[0;94m"${ZDOTDIR:-$HOME}"/.zprezto/dotfiles/.*\033[0m \033[0;36m>>\033[0m \033[0;32m"${ZDOTDIR:-$HOME}""'
 # [get colour codes here "https://wiki.archlinux.org/index.php/Bash/Prompt_customization"]
-alias update='printf "\e[35m updating atom packages... \n" && apm update -y && printf "\e[35m updating global npm modules... \n" && npm update -g && printf "\e[35m updating homebrew... \n" && brew up && printf "\e[35m Your machine is up to date! \n"'
+alias update='softwareupdate -i -a && printf "\e[35m updating atom packages... \n" && apm update --no-confirm && printf "\e[35m updating global npm modules... \n" && npm update -g && printf "\e[35m updating homebrew... \n" && brew up && printf "\e[35m Your machine is up to date! \n"'
 alias nvm-up='nvm install node --reinstall-packages-from=node'
 alias wpl='./node_modules/.bin/webpack'
+
+## GIT
+alias gitlogg='while true; do clear; git log --oneline --graph --decorate --color=always -12 | cat; sleep 5; done'
+alias gitlog='while true; do clear; git log --oneline --decorate --color=always -12 | cat; sleep 5; done'
